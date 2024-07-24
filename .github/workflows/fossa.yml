@@ -102,7 +102,7 @@ jobs:
       # Upload report to S3
     - name: Upload report to S3
       if: always()
-      run: aws s3 cp /home/runner/work/fossa_reports/liquibase.csv s3://liquibaseorg-origin/fossa_reports_liquibase-pro/
+      run: aws s3 cp /home/runner/work/fossa_reports/liquibase.csv s3://liquibaseorg-origin/test_fossa_report/
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.LIQUIBASEORIGIN_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.LIQUIBASEORIGIN_SECRET_ACCESS_KEY }}
